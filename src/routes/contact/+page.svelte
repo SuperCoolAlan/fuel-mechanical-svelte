@@ -22,8 +22,8 @@
             <div class="contact-icon">📞</div>
             <div class="contact-details">
               <h3>Call Us</h3>
-              <p><a href="tel:+15551234567">(555) 123-4567</a></p>
-              <p class="note">24/7 Emergency Service Available</p>
+              <p><a href="tel:+19189912324">(918) 991-2324</a></p>
+              <p class="note">Professional service when you need it</p>
             </div>
           </div>
 
@@ -40,15 +40,15 @@
             <div class="contact-icon">📍</div>
             <div class="contact-details">
               <h3>Service Area</h3>
-              <p>Local Metro Area</p>
+              <p>Tulsa Metro Area</p>
               <p class="note">Serving residential and commercial clients</p>
             </div>
           </div>
         </div>
 
         <div class="emergency-notice">
-          <h3>Emergency Service</h3>
-          <p>For heating and cooling emergencies, call us immediately at <strong>(555) 123-4567</strong>. We're available 24/7 to help restore your comfort.</p>
+          <h3>Need Service?</h3>
+          <p>For heating and cooling service, call us at <strong>(918) 991-2324</strong>. We provide reliable solutions to restore your comfort.</p>
         </div>
       </div>
 

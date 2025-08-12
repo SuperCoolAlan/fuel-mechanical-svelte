@@ -15,7 +15,7 @@
     <p class="description">Professional HVAC services you can trust</p>
     <div class="cta-buttons">
       <a href="/contact" class="btn btn-primary">Get A Quote</a>
-      <a href="/services" class="btn btn-secondary">Our Services</a>
+      <a href="/about#our-services" class="btn btn-secondary">Our Services</a>
     </div>
   </div>
 </div>
@@ -43,8 +43,12 @@
   }
 
   h1 {
+    font-family: 'Oswald', sans-serif;
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    transform: skewX(-8deg);
     margin: 1rem 0;
   }
 

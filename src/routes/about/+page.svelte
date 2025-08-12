@@ -17,16 +17,16 @@
         <h2>Our Story</h2>
         <p>
           Fuel Mechanical LLC has been serving the community with reliable heating and cooling solutions. 
-          We pride ourselves on delivering quality workmanship and exceptional customer service for both 
-          residential and commercial clients.
+          We pride ourselves on delivering precision workmanship and exceptional quality in every project 
+          for both residential and commercial clients.
         </p>
         <p>
-          Our team of certified technicians brings years of experience to every project, ensuring your 
-          comfort systems operate efficiently and reliably year-round.
+          Our team of certified technicians brings years of experience and meticulous attention to detail 
+          to every installation, ensuring your comfort systems operate with optimal efficiency and reliability.
         </p>
       </div>
 
-      <div class="content-block">
+      <div class="content-block" id="our-services">
         <h2>Our Services</h2>
         <ul class="service-list">
           <li>HVAC Installation & Repair</li>
@@ -54,8 +54,8 @@
             <p>Transparent pricing with no hidden fees or surprises</p>
           </div>
           <div class="feature">
-            <h3>24/7 Service</h3>
-            <p>Emergency services available when you need us most</p>
+            <h3>Precision Engineering</h3>
+            <p>Meticulous attention to detail in every installation and repair</p>
           </div>
         </div>
       </div>

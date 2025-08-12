@@ -11,7 +11,7 @@
   <div class="nav-container">
     <div class="nav-brand">
       <a href="/" class="brand-link">
-        <img src="/logo.svg" alt="Fuel Mechanical LLC" class="logo" />
+        <img src="/logo-full-color.svg" alt="Fuel Mechanical LLC" class="logo" />
         <span class="brand-text">Fuel Mechanical</span>
       </a>
     </div>
@@ -26,7 +26,7 @@
 
 <style>
   .navbar {
-    background-color: white;
+    background-color: #f0f8ff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -62,9 +62,13 @@
   }
 
   .brand-text {
+    font-family: 'Oswald', sans-serif;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--primary-blue);
+    font-style: italic;
+    letter-spacing: 0.5px;
+    transform: skewX(-8deg);
   }
 
   .nav-links {
