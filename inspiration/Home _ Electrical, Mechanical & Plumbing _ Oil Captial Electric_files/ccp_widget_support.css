@@ -1,0 +1,32 @@
+﻿.jobListingHeadingSection .activeJobHeading {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.categorySection .categoryHeadingSection  {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.categorySection .jobSection {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.categorySection .jobSection .jobLinkText {
+    font-weight: bold;
+}
+
+.categorySection .jobSection .jobLinkContainer {
+    display: inline-block;
+    width: 300px;
+}
+
+.separatorDash {
+    display: none;
+}

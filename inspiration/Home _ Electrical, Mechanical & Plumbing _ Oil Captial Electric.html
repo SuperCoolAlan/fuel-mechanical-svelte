@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en-US" data-darkreader-mode="dynamic" data-darkreader-scheme="dark"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--user-agent" media="screen">@layer {
+html {
+    background-color: var(--darkreader-background-ffffff, #181a1b) !important;
+}
+html {
+    color-scheme: dark !important;
+}
+iframe {
+    color-scheme: dark !important;
+}
+html, body {
+    background-color: var(--darkreader-background-ffffff, #181a1b);
+}
+html, body {
+    border-color: var(--darkreader-border-4c4c4c, #736b5e);
+    color: var(--darkreader-text-000000, #e8e6e3);
+}
+a {
+    color: var(--darkreader-text-0040ff, #3391ff);
+}
+table {
+    border-color: var(--darkreader-border-808080, #545b5e);
+}
+mark {
+    color: var(--darkreader-text-000000, #e8e6e3);
+}
+::placeholder {
+    color: var(--darkreader-text-a9a9a9, #b2aba1);
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: var(--darkreader-background-faffbd, #404400) !important;
+    color: var(--darkreader-text-000000, #e8e6e3) !important;
+}
+* {
+    scrollbar-color: var(--darkreader-background-b0b0b0, #454a4d) var(--darkreader-background-f1f1f1, #202324);
+}
+::selection {
+    background-color: var(--darkreader-background-0060d4, #004daa) !important;
+    color: var(--darkreader-text-ffffff, #e8e6e3) !important;
+}
+::-moz-selection {
+    background-color: var(--darkreader-background-0060d4, #004daa) !important;
+    color: var(--darkreader-text-ffffff, #e8e6e3) !important;
+}
+}</style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen">.jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, span#closed_text > img[src^="https://www.gstatic.com/images/branding/googlelogo"], span[data-href^="https://www.hcaptcha.com/"] > #icon, img.Wirisformula, a[data-testid="headerMediumLogo"]>svg, .d2l-navigation-link-image-container, .d2l-iframe-loading-container {
+    filter: invert(100%) hue-rotate(180deg) contrast(90%) !important;
+}</style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}
+[data-darkreader-inline-stopcolor] {
+  stop-color: var(--darkreader-inline-stopcolor) !important;
+}
+[data-darkreader-inline-bg] {
+  background: var(--darkreader-inline-bg) !important;
+}
+[data-darkreader-inline-border-short] {
+  border: var(--darkreader-inline-border-short) !important;
+}
+[data-darkreader-inline-border-bottom-short] {
+  border-bottom: var(--darkreader-inline-border-bottom-short) !important;
+}
+[data-darkreader-inline-border-left-short] {
+  border-left: var(--darkreader-inline-border-left-short) !important;
+}
+[data-darkreader-inline-border-right-short] {
+  border-right: var(--darkreader-inline-border-right-short) !important;
+}
+[data-darkreader-inline-border-top-short] {
+  border-top: var(--darkreader-inline-border-top-short) !important;
+}
+[data-darkreader-inline-invert] {
+    filter: invert(100%) hue-rotate(180deg);
+}</style><style class="darkreader darkreader--variables" media="screen">:root {
+   --darkreader-neutral-background: var(--darkreader-background-ffffff, #181a1b);
+   --darkreader-neutral-text: var(--darkreader-text-000000, #e8e6e3);
+   --darkreader-selection-background: var(--darkreader-background-0060d4, #004daa);
+   --darkreader-selection-text: var(--darkreader-text-ffffff, #e8e6e3);
+}</style><style class="darkreader darkreader--root-vars" media="screen"></style>
+<meta charset="UTF-8">
+<script type="text/javascript" async="" charset="utf-8" src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-TG5g5Dk43Fs+5i/7xL9a4bBQ4Pg/EAutBT8nLaRiYl1GoFPQDxyCkJYzTQEw2Njo"></script><script type="text/javascript">
+/* <![CDATA[ */
+ var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,initializeOnLoaded:function(o){gform.domLoaded&&gform.scriptsLoaded?o():!gform.domLoaded&&gform.scriptsLoaded?window.addEventListener("DOMContentLoaded",o):document.addEventListener("gform_main_scripts_loaded",o)},hooks:{action:{},filter:{}},addAction:function(o,n,r,t){gform.addHook("action",o,n,r,t)},addFilter:function(o,n,r,t){gform.addHook("filter",o,n,r,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,n){gform.removeHook("action",o,n)},removeFilter:function(o,n,r){gform.removeHook("filter",o,n,r)},addHook:function(o,n,r,t,i){null==gform.hooks[o][n]&&(gform.hooks[o][n]=[]);var e=gform.hooks[o][n];null==i&&(i=n+"_"+e.length),gform.hooks[o][n].push({tag:i,callable:r,priority:t=null==t?10:t})},doHook:function(n,o,r){var t;if(r=Array.prototype.slice.call(r,1),null!=gform.hooks[n][o]&&((o=gform.hooks[n][o]).sort(function(o,n){return o.priority-n.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==n?t.apply(null,r):r[0]=t.apply(null,r)})),"filter"==n)return r[0]},removeHook:function(o,n,t,i){var r;null!=gform.hooks[o][n]&&(r=(r=gform.hooks[o][n]).filter(function(o,n,r){return!!(null!=i&&i!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][n]=r)}}); 
+/* ]]> */
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+<link href="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/css.css" rel="stylesheet">
+<link rel="stylesheet" href="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/yiv0jyh.css"><style class="darkreader darkreader--cors" media="screen">.tk-usual { font-family: "usual",sans-serif; }</style><style class="darkreader darkreader--sync" media="screen"></style>
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style><style class="darkreader darkreader--sync" media="screen"></style>
+	
+	<!-- This site is optimized with the Yoast SEO plugin v25.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Home | Electrical, Mechanical &amp; Plumbing | Oil Captial Electric</title>
+	<meta name="description" content="Oil Capital Electric is comprised of electrical &amp; mechanical experts. With experience in multiple industries, discover how we can tackle your next project.">
+	<link rel="canonical" href="https://www.oilcapitalelectric.com/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Home | Electrical, Mechanical &amp; Plumbing | Oil Captial Electric">
+	<meta property="og:description" content="Oil Capital Electric is comprised of electrical &amp; mechanical experts. With experience in multiple industries, discover how we can tackle your next project.">
+	<meta property="og:url" content="https://www.oilcapitalelectric.com/">
+	<meta property="og:site_name" content="OCE | Oil Capital Electric">
+	<meta property="article:modified_time" content="2018-12-04T22:20:47+00:00">
+	<meta name="twitter:card" content="summary_large_image">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.oilcapitalelectric.com/","url":"https://www.oilcapitalelectric.com/","name":"Home | Electrical, Mechanical & Plumbing | Oil Captial Electric","isPartOf":{"@id":"https://www.oilcapitalelectric.com/#website"},"about":{"@id":"https://www.oilcapitalelectric.com/#organization"},"datePublished":"2018-02-12T18:08:01+00:00","dateModified":"2018-12-04T22:20:47+00:00","description":"Oil Capital Electric is comprised of electrical & mechanical experts. With experience in multiple industries, discover how we can tackle your next project.","breadcrumb":{"@id":"https://www.oilcapitalelectric.com/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.oilcapitalelectric.com/"]}]},{"@type":"BreadcrumbList","@id":"https://www.oilcapitalelectric.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https://www.oilcapitalelectric.com/#website","url":"https://www.oilcapitalelectric.com/","name":"OCE | Oil Capital Electric","description":"EMP from one dependable name","publisher":{"@id":"https://www.oilcapitalelectric.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.oilcapitalelectric.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.oilcapitalelectric.com/#organization","name":"OCE | Oil Capital Electric","url":"https://www.oilcapitalelectric.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.oilcapitalelectric.com/#/schema/logo/image/","url":"https://www.oilcapitalelectric.com/wp-content/uploads/2018/02/oce_logo.svg","contentUrl":"https://www.oilcapitalelectric.com/wp-content/uploads/2018/02/oce_logo.svg","caption":"OCE | Oil Capital Electric"},"image":{"@id":"https://www.oilcapitalelectric.com/#/schema/logo/image/"}}]}</script>
+	<meta name="google-site-verification" content="RdsDfl6VyAw7aukOrzUG_9-vK76hPl-brwZsWK8ghA8">
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="alternate" type="application/rss+xml" title="OCE | Oil Capital Electric » Feed" href="https://www.oilcapitalelectric.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="OCE | Oil Capital Electric » Comments Feed" href="https://www.oilcapitalelectric.com/comments/feed/">
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.oilcapitalelectric.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.2"}};
+/*! This file is auto-generated */
+!function(s,n){var o,i,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),a=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===a[t]})}function u(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);for(var n=e.getImageData(16,16,1,1),a=0;a<n.data.length;a++)if(0!==n.data[a])return!1;return!0}function f(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\udedf")}return!1}function g(e,t,n,a){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):s.createElement("canvas"),o=r.getContext("2d",{willReadFrequently:!0}),i=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(function(e){i[e]=t(o,e,n,a)}),i}function t(e){var t=s.createElement("script");t.src=e,t.defer=!0,s.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",i=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){s.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+g.toString()+"("+[JSON.stringify(i),f.toString(),p.toString(),u.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"}),r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=function(e){c(n=e.data),r.terminate(),t(n)})}catch(e){}c(n=g(i,f,p,u))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script><meta name="darkreader" content="8260f19831ca46baaffd99d33f462db6"><style class="darkreader darkreader--override" media="screen">.vimvixen-hint {
+    background-color: var(--darkreader-background-ffd76e, #684b00) !important;
+    border-color: var(--darkreader-background-c59d00, #9e7e00) !important;
+    color: var(--darkreader-text-302505, #d7d4cf) !important;
+}
+#vimvixen-console-frame {
+    color-scheme: light !important;
+}
+::placeholder {
+    opacity: 0.5 !important;
+}
+#edge-translate-panel-body,
+.MuiTypography-body1,
+.nfe-quote-text {
+    color: var(--darkreader-neutral-text) !important;
+}
+gr-main-header {
+    background-color: var(--darkreader-background-add8e6, #1b4958) !important;
+}
+.tou-z65h9k,
+.tou-mignzq,
+.tou-1b6i2ox,
+.tou-lnqlqk {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.tou-75mvi {
+    background-color: var(--darkreader-background-cfecf5, #0f3a47) !important;
+}
+.tou-ta9e87,
+.tou-1w3fhi0,
+.tou-1b8t2us,
+.tou-py7lfi,
+.tou-1lpmd9d,
+.tou-1frrtv8,
+.tou-17ezmgn {
+    background-color: var(--darkreader-background-f5f5f5, #1e2021) !important;
+}
+.tou-uknfeu {
+    background-color: var(--darkreader-background-faedda, #432c09) !important;
+}
+.tou-6i3zyv {
+    background-color: var(--darkreader-background-85c3d8, #245d70) !important;
+}
+div.mermaid-viewer-control-panel .btn {
+    background-color: var(--darkreader-neutral-background);
+    fill: var(--darkreader-neutral-text);
+}
+svg g rect.er {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.er.entityBox {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.er.attributeBoxOdd {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.er.attributeBoxEven {
+    fill: var(--darkreader-selection-background);
+    fill-opacity: 0.8 !important;
+}
+svg rect.er.relationshipLabelBox {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g g.nodes rect,
+svg g g.nodes polygon {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.task {
+    fill: var(--darkreader-selection-background) !important;
+}
+svg line.messageLine0,
+svg line.messageLine1 {
+    stroke: var(--darkreader-neutral-text) !important;
+}
+div.mermaid .actor {
+    fill: var(--darkreader-neutral-background) !important;
+}
+mitid-authenticators-code-app > .code-app-container {
+    background-color: white !important;
+    padding-top: 1rem;
+}
+iframe#unpaywall[src$="unpaywall.html"] {
+    color-scheme: light !important;
+}
+select {
+    --darkreader-bg--form-control-background-color: rgba(22, 22, 22, 0) !important;
+}
+select * {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+body#tumblr {
+    --darkreader-bg--secondary-accent: 31, 32, 34 !important;
+    --darkreader-bg--white: 23, 23, 23 !important;
+    --darkreader-text--black: 228, 224, 218 !important;
+}
+:host {
+    --d2l-border-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+    --d2l-button-icon-background-color-hover: var(--darkreader-bg--d2l-color-gypsum) !important;
+    --d2l-color-ferrite: var(--darkreader-neutral-text) !important;
+    --d2l-color-sylvite: var(--darkreader-bg--d2l-color-sylvite) !important;
+    --d2l-dropdown-background-color: var(--darkreader-neutral-background) !important;
+    --d2l-dropdown-border-color: var(--darkreader-border--d2l-color-mica) !important;
+    --d2l-input-backgroud-color: var(--darkreader-neutral-background) !important;
+    --d2l-menu-border-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+    --d2l-tooltip-background-color: var(--darkreader-neutral-background) !important;
+    --d2l-tooltip-border-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+}
+:host([_floating]) .d2l-floating-buttons-container {
+    background-color: var(--darkreader-neutral-background) !important;
+    border-top-color: var(--darkreader-border--d2l-color-mica) !important;
+    opacity: 0.88 !important;
+}
+d2l-card {
+    background: var(--darkreader-neutral-background) !important;
+    border-color: var(--darkreader-border--d2l-color-gypsum) !important;
+}
+d2l-dropdown-content > div,
+d2l-menu-item {
+    background-color: var(--darkreader-neutral-background) !important;
+    border-radius: 10px !important;
+}
+d2l-empty-state-simple {
+    border-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+}
+.d2l-button-filter > ul > li > a.vui-button {
+    border-color: var(--darkreader-border--d2l-color-mica) !important;
+}
+.d2l-label-text:has(.d2l-button-subtle-content):hover,
+.d2l-label-text:has(.d2l-button-subtle-content):focus,
+.d2l-label-text:has(.d2l-button-subtle-content):active {
+    background-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+}
+.d2l-navigation-centerer {
+    color: inherit !important;
+}
+.d2l-tabs-layout {
+    border-color: var(--darkreader-border--d2l-color-gypsum) !important;
+}
+.d2l-input,
+.d2l-calendar-date,
+.d2l-htmleditor-container {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.d2l-collapsible-panel {
+    border: 1px solid var(--darkreader-border--d2l-color-mica) !important;
+    border-radius: 0.4rem !important;
+}
+.d2l-collapsible-panel-divider {
+    border-bottom: 1px solid var(--darkreader-border--d2l-color-mica) !important;
+}
+.d2l-w2d-flex {
+    border-bottom: 2px solid var(--darkreader-border--d2l-color-mica) !important;
+}
+.d2l-collapsible-panel scrolled,
+.d2l-collapsible-panel-header,
+.d2l-w2d-collection-fixed {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.d2l-loading-spinner-bg {
+    fill: var(--darkreader-bg--d2l-color-gypsum) !important;
+}
+.d2l-loading-spinner-bg-stroke {
+    stroke: var(--darkreader-border--d2l-color-mica) !important;
+}
+.d2l-loading-spinner-wrapper svg path,
+.d2l-loading-spinner-wrapper svg circle {
+    fill: var(--darkreader-neutral-background) !important;
+}
+embed[type="application/pdf"] { filter: invert(100%) contrast(90%); }</style>
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style><style class="darkreader darkreader--sync" media="screen"></style>
+<link rel="stylesheet" id="wp-block-library-css" href="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/style.min.css" type="text/css" media="all"><style class="darkreader darkreader--sync" media="screen"></style>
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style><style class="darkreader darkreader--sync" media="screen"></style>
+<style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style><style class="darkreader darkreader--sync" media="screen"></style>
+<link rel="stylesheet" id="bootstrap-css" href="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/bootstrap.min.css" type="text/css" media="all"><style class="darkreader darkreader--sync" media="screen"></style>
+<link rel="stylesheet" id="style-css" href="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/style.css" type="text/css" media="all"><style class="darkreader darkreader--sync" media="screen"></style>
+<script type="text/javascript" src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/jquery.min_002.js" id="ed-jquery-js"></script>
+<script type="text/javascript" src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/viewanim.js" id="view-anim-js"></script>
+<link rel="https://api.w.org/" href="https://www.oilcapitalelectric.com/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://www.oilcapitalelectric.com/wp-json/wp/v2/pages/71"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.oilcapitalelectric.com/xmlrpc.php?rsd">
+<link rel="shortlink" href="https://www.oilcapitalelectric.com/">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.oilcapitalelectric.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.oilcapitalelectric.com%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.oilcapitalelectric.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.oilcapitalelectric.com%2F&amp;format=xml">
+<link rel="icon" href="https://www.oilcapitalelectric.com/wp-content/uploads/2018/10/cropped-ocefavicon512-32x32.jpg" sizes="32x32">
+<link rel="icon" href="https://www.oilcapitalelectric.com/wp-content/uploads/2018/10/cropped-ocefavicon512-192x192.jpg" sizes="192x192">
+<link rel="apple-touch-icon" href="https://www.oilcapitalelectric.com/wp-content/uploads/2018/10/cropped-ocefavicon512-180x180.jpg">
+<meta name="msapplication-TileImage" content="https://www.oilcapitalelectric.com/wp-content/uploads/2018/10/cropped-ocefavicon512-270x270.jpg">
+<!-- BEGIN Adobe Fonts for WordPress --><link rel="stylesheet" href="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/yiv0jyh.css"><style class="darkreader darkreader--cors" media="screen">.tk-usual { font-family: "usual",sans-serif; }</style><style class="darkreader darkreader--sync" media="screen"></style><!-- END Adobe Fonts for WordPress --> 
+<style>
+.loader_wrapper {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	z-index: 999;
+	background: #fff;
+	overflow: hidden;
+}
+.red_curtain {
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 0;
+	height: 100vh;
+	animation: curtain .4s ease-in-out forwards;
+	background: #d0021b;
+	float: left;
+}
+.black_curtain {
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 0;
+	height: 100vh;
+	animation: curtain .4s ease-in-out .4s forwards;
+	background: #000;
+}
+@keyframes curtain {
+	from { width: 0; }
+	to { width: 100%; }
+}
+.loader_wrapper img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	opacity: 0;
+	transform: translate3d(-50%,-50%,0);
+	animation: appear 1s ease-in-out .8s forwards;
+}
+@keyframes appear {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+.home-no-overflow *,
+.home-no-overflow *:before,
+.home-no-overflow *:after {
+  animation-play-state: paused !important;
+}
+
+</style><style class="darkreader darkreader--sync" media="screen"></style>
+
+<script type="text/javascript" src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/ccp_widget_support.js"> </script>
+<link rel="stylesheet" href="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/ccp_widget_support.css"><style class="darkreader darkreader--cors" media="screen">.jobListingHeadingSection .activeJobHeading {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.categorySection .categoryHeadingSection  {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.categorySection .jobSection {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.categorySection .jobSection .jobLinkText {
+    font-weight: bold;
+}
+
+.categorySection .jobSection .jobLinkContainer {
+    display: inline-block;
+    width: 300px;
+}
+
+.separatorDash {
+    display: none;
+}</style><style class="darkreader darkreader--sync" media="screen"></style> 
+
+<script type="text/javascript">
+    var options = {
+        CCPCode: "OilCapitalElectric"
+        ,ElementID: "BDHRJobListings"
+        ,ShowCustomContent: false
+    };
+
+    bdhr.generateListing(options);
+</script><script src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/ccp_jobs_002.js"></script>	
+<script type="text/javascript">
+    var options = {
+        CCPCode: "OilCapitalMechanical"
+        ,ElementID: "BDHRJobListingsMech"
+        ,ShowCustomContent: false
+    };
+
+    bdhr.generateListing(options);
+</script><script src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/ccp_jobs.js"></script>
+	
+<meta name="google-site-verification" content="BmB4rpgtkuiIdjEbM6OIOZtVlUwM0tZ8-F8vICelzBU">
+<!-- Google tag (gtag.js) -->
+<script async="" src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/google-analytics_analytics.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WN40BS5PJV');
+</script>
+<!-- Hotjar Tracking Code for www.oilcapitalelectric.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1192123,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script><script async="" src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/hotjar-1192123.js"></script>
+</head>
+<body class="home wp-singular page-template-default page page-id-71 wp-custom-logo wp-theme-intentionally-blank js-loading">
+<div class="loader_wrapper" style="height: 0px;">
+	<div class="red_curtain"></div>
+	<div class="black_curtain"></div>
+	<img src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/oce_logo.svg" alt="OCE Logo Animation">
+</div>
+<script>
+var img = document.querySelector("img");
+document.body.classList.add('js-loading');
+	
+$(window).on('load', function() {
+	$('.loader_wrapper').delay(2000).animate({"height": "0"});	
+	$('body').delay(2000).removeClass('home-no-overflow');
+});	
+
+</script>
+
+<header class="">
+	<div class="logo"><a href="https://www.oilcapitalelectric.com/"><img src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/oce_logo.svg" alt="OCE logo"></a></div>
+	<div class="menu-em-menu-container"><ul id="menu-em-menu" class="menu"><li id="menu-item-136" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136" style="background: rgb(255, 255, 255); --darkreader-inline-bgcolor: var(--darkreader-background-ffffff, #181a1b); --darkreader-inline-bgimage: none;" data-darkreader-inline-bgcolor="" data-darkreader-inline-bgimage=""><a href="https://www.oilcapitalelectric.com/electrical/" style="color: rgb(184, 35, 47); --darkreader-inline-color: var(--darkreader-text-b8232f, #de535f);" data-darkreader-inline-color=""><img src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/electrical.svg" alt="electrical"><span>Electrical</span></a></li>
+<li id="menu-item-135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-135" style="background: rgb(0, 0, 0); --darkreader-inline-bgcolor: var(--darkreader-background-000000, #000000); --darkreader-inline-bgimage: none;" data-darkreader-inline-bgcolor="" data-darkreader-inline-bgimage=""><a href="https://www.oilcapitalelectric.com/mechanical/" style="color: rgb(255, 255, 255); --darkreader-inline-color: var(--darkreader-text-ffffff, #e8e6e3);" data-darkreader-inline-color=""><img src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/mechanical.svg" alt="mechanical"><span>Mechanical</span></a></li>
+</ul></div>	<div class="right-side-menu">
+		<div class="menu-main-menu-container"><ul id="menu-main-menu" class="menu"><li id="menu-item-987" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-987"><a href="https://www.oilcapitalelectric.com/careers/">Careers</a></li>
+<li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="https://www.oilcapitalelectric.com/projects/">Projects</a></li>
+<li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a href="https://www.oilcapitalelectric.com/about/">About</a></li>
+</ul></div>		
+		<div class="burger">
+			<div class="topbun"></div>
+			<div class="meat"></div>
+			<div class="bottombun"></div>
+		</div>
+	</div>
+	<div class="menu-utility-menu-container"><ul id="menu-utility-menu" class="menu"><div class="burgerclose"><div></div><div></div></div><li id="menu-item-988" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-988"><a href="https://www.oilcapitalelectric.com/contact/">Contact</a></li>
+<li id="menu-item-990" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-990"><a href="https://www.oilcapitalelectric.com/news/">News</a></li>
+<li id="menu-item-86" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-86"><a href="http://intranet.oilcapitalelectric.com/"><img src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/intranet.svg" alt="intranet"><span>Intranet</span></a></li>
+</ul></div>	<div class="menu-mobile-menu-container"><ul id="menu-mobile-menu" class="menu"><li id="menu-item-101" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101"><a href="https://www.oilcapitalelectric.com/electrical/">Electrical</a></li>
+<li id="menu-item-100" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-100"><a href="https://www.oilcapitalelectric.com/mechanical/">Mechanical</a></li>
+<li id="menu-item-99" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99"><a href="https://www.oilcapitalelectric.com/projects/">Projects</a></li>
+<li id="menu-item-98" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-98"><a href="https://www.oilcapitalelectric.com/about/">About</a></li>
+<li id="menu-item-97" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-97"><a href="https://www.oilcapitalelectric.com/contact/">Contact</a></li>
+<li id="menu-item-96" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-96"><a href="https://www.oilcapitalelectric.com/careers/">Careers</a></li>
+<li id="menu-item-95" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95"><a href="https://www.oilcapitalelectric.com/news/">News</a></li>
+<li id="menu-item-102" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-102"><a href="#">Intranet</a></li>
+</ul></div></header>
+
+	
+	
+
+<section class="intro lined in-view"><div class="line_right"></div><div class="line_left"></div><div class="line_half"></div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-6 lefthalfhover"><a href="https://www.oilcapitalelectric.com/electrical"></a></div> 
+			<div class="col-6 lefthalf" style="background-image: url(&quot;https://www.oilcapitalelectric.com/wp-content/uploads/2018/08/Electrical_poster.jpg&quot;); background-size: cover; background-position: right center; filter: grayscale(0);">
+								<video muted="muted" style="filter: grayscale(0);">
+				    <source src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/Electrical_2.mp4" type="video/mp4">
+				    <!--<source src="" type="video/ogg">-->
+				</video>
+					
+				<img class="hidden-md-up" src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/Electrical_poster.jpg" alt="Electrical">
+			</div>
+			<div class="col-6 righthalfhover"><a href="https://www.oilcapitalelectric.com/mechanical"></a></div>
+			<div class="col-6 righthalf" style="background-image: url(&quot;https://www.oilcapitalelectric.com/wp-content/uploads/2018/08/Mechanical_poster.jpg&quot;); background-size: cover; background-position: left center; filter: grayscale(100%);">
+								<video muted="muted" style="filter: grayscale(100%);">
+				    <source src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/Mechanical_2.mp4" type="video/mp4">
+				    <!--<source src="" type="video/ogg">-->
+				</video>
+					
+				<img class="hidden-md-up" src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/Mechanical_poster.jpg" alt="Mechanical">
+			</div>
+			<div class="hp_banner intro_copy">
+				<h1>Mechanical,<br>Electrical &amp;<br>Plumbing</h1>
+				
+				<div class="subhead" style="width: 456.117px;"><p id="typed">From one dependable name</p><div id="type" style="">From one dependable name</div><p></p></div>
+			</div>	
+			<div class="scrolldown">
+				<p>Explore</p>
+				<img src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/redarrow_double_right.svg" alt="scroll down">
+			</div>
+		</div>
+	</div>
+</section>	
+	
+
+
+
+	
+
+
+
+
+
+
+
+
+
+		
+	
+	
+
+	
+
+
+
+	
+
+
+<section class="industries_slider lined animbg in-view"><div class="line_right"></div><div class="line_left"></div><div class="line_half"></div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-3" style="height: 641.25px;">
+				<form action="https://www.oilcapitalelectric.com/wp-admin/admin-ajax.php" method="POST" id="filter">				
+					<h2>Industries</h2><fieldset>							<fieldgroup><input type="radio" class="ind_cat_filt" name="ind_cat_filt[]" id="7" value="aviation" checked="checked"><label for="7">Aviation</label><br></fieldgroup>
+														<fieldgroup><input type="radio" class="ind_cat_filt" name="ind_cat_filt[]" id="14" value="commercial"><label for="14">Commercial</label><br></fieldgroup>
+														<fieldgroup><input type="radio" class="ind_cat_filt" name="ind_cat_filt[]" id="8" value="education"><label for="8">Education</label><br></fieldgroup>
+														<fieldgroup><input type="radio" class="ind_cat_filt" name="ind_cat_filt[]" id="9" value="healthcare"><label for="9">Healthcare</label><br></fieldgroup>
+														<fieldgroup><input type="radio" class="ind_cat_filt" name="ind_cat_filt[]" id="10" value="hospitality"><label for="10">Hospitality</label><br></fieldgroup>
+														<fieldgroup><input type="radio" class="ind_cat_filt" name="ind_cat_filt[]" id="11" value="industrial"><label for="11">Industrial</label><br></fieldgroup>
+														<fieldgroup><input type="radio" class="ind_cat_filt" name="ind_cat_filt[]" id="12" value="leisure"><label for="12">Leisure</label><br></fieldgroup>
+														<fieldgroup><input type="radio" class="ind_cat_filt" name="ind_cat_filt[]" id="28" value="mission-critical"><label for="28">Mission Critical</label><br></fieldgroup>
+														<fieldgroup><input type="radio" class="ind_cat_filt" name="ind_cat_filt[]" id="13" value="multi-unit-residential"><label for="13">Multi-Unit Residential</label><br></fieldgroup>
+														<fieldgroup><input type="radio" class="ind_cat_filt" name="ind_cat_filt[]" id="15" value="public-works"><label for="15">Public Works</label><br></fieldgroup>
+														<fieldgroup><input type="radio" class="ind_cat_filt" name="ind_cat_filt[]" id="16" value="retail"><label for="16">Retail</label><br></fieldgroup>
+														<fieldgroup><input type="radio" class="ind_cat_filt" name="ind_cat_filt[]" id="17" value="sports"><label for="17">Sports</label><br></fieldgroup>
+														<fieldgroup><input type="radio" class="ind_cat_filt" name="ind_cat_filt[]" id="27" value="water-supply"><label for="27">Water Supply</label><br></fieldgroup>
+							</fieldset>					<input type="hidden" name="action" value="industryfilter">
+				</form>
+			</div>
+			
+			<div id="industries_response" class="col-md-9" style="margin-bottom: 256.5px;">
+												<div class="project_image" style="height: 641.25px;"> 
+									<img width="1200" height="800" src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/TUF-TIA-Concourse-A-Concourse-skylights.jpg" class="attachment-industry-big size-industry-big wp-post-image" alt="airport concourse" decoding="async" loading="lazy" srcset="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/TUF-TIA-Concourse-A-Concourse-skylights.jpg 1200w, Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/TUF-TIA-Concourse-A-Concourse-skylights-360x240.jpg 360w, Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/TUF-TIA-Concourse-A-Concourse-skylights-768x512.jpg 768w, Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/TUF-TIA-Concourse-A-Concourse-skylights-540x360.jpg 540w" sizes="auto, (max-width: 1200px) 100vw, 1200px">																	</div>
+															<div class="project_image" style="height: 427.483px;"> 
+									<img width="576" height="760" src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/IMG_2472_sm-576x760.jpg" class="attachment-industry-medium size-industry-medium wp-post-image" alt="an airport chiller" decoding="async" loading="lazy">																	</div>
+															<div class="project_image" style="height: 256.5px;"> 
+									<img width="380" height="380" src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/TUF-TIA-Concourse-A-Gate-waiting-area-380x380.jpg" class="attachment-industry-small size-industry-small wp-post-image" alt="airport gate waiting area" decoding="async" loading="lazy" srcset="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/TUF-TIA-Concourse-A-Gate-waiting-area-380x380.jpg 380w, Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/TUF-TIA-Concourse-A-Gate-waiting-area-760x760.jpg 760w" sizes="auto, (max-width: 380px) 100vw, 380px">																	</div>
+											<div class="industry_overview">	
+					<div class="industry_overview_inner">
+						We understand the unique needs and security requirements of 
+terminals, hangars, maintenance facilities and other sites that serve 
+the air transportation sector. When quality electrical and mechanical 
+work counts, count on OCE.					</div>
+				</div>
+				
+				<div class="scrollers">
+					<div class="next" onclick="dayNavigation('next');" data-role="none" aria-label="Next" tabindex="0" role="button">
+						<img src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/redarrow_down_blackbg.svg" alt="Next Industry">
+					</div>
+					<!--<div class="previous" onclick="dayNavigation('prev');" data-role="none" aria-label="Previous" tabindex="0" role="button">
+						<img src="/wp-content/uploads/2018/02/redarrow_down_blackbg.svg" alt="Previous Industry" />
+					</div>-->		
+				</div>
+				
+			</div>
+		
+		</div>
+	</div>
+</section>			
+
+
+
+
+
+
+
+		
+	
+	
+
+	
+
+<section class="differentiators lined in-view" style="background-image: url(https://www.oilcapitalelectric.com/wp-content/uploads/2018/08/OCE_Stock_Reshoot-180.jpg); background-size: cover; background-position: center;"><div class="line_right"></div><div class="line_left"></div><div class="line_half"></div>
+	<div class="container-fluid">
+		<div class="row">
+
+			<div class="differentiator_copy_ss">	
+				<h2>The OCE Way</h2>
+										<div id="snap_slider_2" class="carousel carousel-fade" data-ride="carousel">
+						<div class="carousel-inner" role="listbox">
+												<div class="carousel-item">							<div class="animated_icon_and_title">
+								<div class="animated_icon">
+									<img src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/fair.svg" alt="Fair">
+								</div>
+								Fair	
+							</div>	
+							<p>We use our vast experience to deliver fair and accurate estimates that reduce surprises and change-orders down the road.</p>		
+							</div>
+												<div class="carousel-item active">							<div class="animated_icon_and_title">
+								<div class="animated_icon">
+									<img src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/knowledge.svg" alt="Knowledgeable">
+								</div>
+								Knowledgeable	
+							</div>	
+							<p>Our proactive experts think holistically about every detail to help you achieve your goals in the most efficient way.</p>		
+							</div>
+												<div class="carousel-item">							<div class="animated_icon_and_title">
+								<div class="animated_icon">
+									<img src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/safety.svg" alt="">
+								</div>
+								Safe	
+							</div>	
+							<p>Safety is the #1 part of our culture, as evidenced by our low 
+EMR rate of .61 and an in-house safety director who is an OSHA 500 
+outreach trainer.</p>		
+							</div>
+												<div class="carousel-item">							<div class="animated_icon_and_title">
+								<div class="animated_icon">
+									<img src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/quality.svg" alt="Quality">
+								</div>
+								Quality	
+							</div>	
+							<p>Our reputation for uncompromising quality spans nearly 50 years. Our projects deliver lower maintenance and longer life cycles.</p>		
+							</div>
+												<div class="carousel-item">							<div class="animated_icon_and_title">
+								<div class="animated_icon">
+									<img src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/time.svg" alt="On-time">
+								</div>
+								On-time	
+							</div>	
+							<p>Improved schedules, fewer unknowns. Our projects start and finish on time because they’re done right.</p>		
+							</div>
+																		</div>
+					</div>
+								
+				
+			</div>
+ 
+		</div>
+	</div>
+</section>			
+
+
+	
+
+
+
+
+
+
+
+
+
+		
+
+<footer>
+	
+	<section id="footer-widgets" class="lined in-view"><div class="line_right"></div><div class="line_left"></div><div class="line_half"></div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-3 col-md-6"><div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="menu"><li id="menu-item-93" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-93"><a href="https://www.oilcapitalelectric.com/electrical/">Electrical</a></li>
+<li id="menu-item-92" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92"><a href="https://www.oilcapitalelectric.com/mechanical/">Mechanical</a></li>
+<li id="menu-item-91" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-91"><a href="https://www.oilcapitalelectric.com/projects/">Projects</a></li>
+<li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90"><a href="https://www.oilcapitalelectric.com/about/">About</a></li>
+<li id="menu-item-88" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88"><a href="https://www.oilcapitalelectric.com/careers/">Careers</a></li>
+<li id="menu-item-89" class="secondary-item menu-item menu-item-type-post_type menu-item-object-page menu-item-89"><a href="https://www.oilcapitalelectric.com/contact/">Contact</a></li>
+<li id="menu-item-94" class="secondary-item menu-item menu-item-type-custom menu-item-object-custom menu-item-94"><a href="http://intranet.oilcapitalelectric.com/">Intranet</a></li>
+</ul></div></div>
+				<div class="col-lg-3 col-md-6"><div class="widgetizedArea"><h3>Ready to Get Started?</h3>			<div class="textwidget"><p class="p1"><span style="font-weight: 400;">Whether
+ you’re looking for electrical or mechanical — or both from one source —
+ we’re here to help make your next project a smooth and lasting success.</span></p>
+<p><a href="tel:+19183177105">Electrical: (918) 317-3255</a><br>
+<a href="tel:+19183177105">Mechanical: (918) 317-7105</a></p>
+</div>
+		</div> </div>
+				<div class="col-lg-6 col-md-12"><div class="widgetizedArea"><link rel="stylesheet" id="gforms_reset_css-css" href="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/formreset.min.css" type="text/css" media="all"><style class="darkreader darkreader--sync" media="screen"></style>
+<link rel="stylesheet" id="gforms_formsmain_css-css" href="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/formsmain.min.css" type="text/css" media="all"><style class="darkreader darkreader--sync" media="screen"></style>
+<link rel="stylesheet" id="gforms_ready_class_css-css" href="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/readyclass.min.css" type="text/css" media="all"><style class="darkreader darkreader--sync" media="screen"></style>
+<link rel="stylesheet" id="gforms_browsers_css-css" href="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/browsers.min.css" type="text/css" media="all"><style class="darkreader darkreader--sync" media="screen"></style>
+<script type="text/javascript" src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/dom-ready.min.js" id="wp-dom-ready-js"></script>
+<script type="text/javascript" src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/hooks.min.js" id="wp-hooks-js"></script>
+<script type="text/javascript" src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/i18n.min.js" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+</script>
+<script type="text/javascript" src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/a11y.min.js" id="wp-a11y-js"></script>
+<script type="text/javascript" src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/jquery.min.js" id="jquery-core-js"></script>
+<script type="text/javascript" src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+<script type="text/javascript" defer="defer" src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/jquery.json.min.js" id="gform_json-js"></script>
+<script type="text/javascript" id="gform_gravityforms-js-extra">
+/* <![CDATA[ */
+var gform_i18n = {"datepicker":{"days":{"monday":"Mon","tuesday":"Tue","wednesday":"Wed","thursday":"Thu","friday":"Fri","saturday":"Sat","sunday":"Sun"},"months":{"january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December"},"firstDay":1,"iconText":"Select date"}};
+var gf_legacy_multi = [];
+var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file is not allowed. Must be one of the following:","delete_file":"Delete this file","in_progress":"in progress","file_exceeds_limit":"File exceeds size limit","illegal_extension":"This type of file is not allowed.","max_reached":"Maximum number of files reached","unknown_error":"There was a problem while saving the file on the server","currently_uploading":"Please wait for the uploading to complete","cancel":"Cancel","cancel_upload":"Cancel this upload","cancelled":"Cancelled"},"vars":{"images_url":"https:\/\/www.oilcapitalelectric.com\/wp-content\/plugins\/gravityforms\/images"}};
+var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2,"code":"USD"},"base_url":"https:\/\/www.oilcapitalelectric.com\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/www.oilcapitalelectric.com\/wp-content\/plugins\/gravityforms\/images\/spinner.svg","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+/* ]]> */
+</script>
+<script type="text/javascript" defer="defer" src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/gravityforms.min.js" id="gform_gravityforms-js"></script>
+<script type="text/javascript" defer="defer" src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/api.js" id="gform_recaptcha-js"></script>
+<script type="text/javascript" defer="defer" src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/jquery.maskedinput.min.js" id="gform_masked_input-js"></script>
+<script type="text/javascript"></script>
+                <div class="gf_browser_unknown gform_wrapper gform_legacy_markup_wrapper" id="gform_wrapper_1"><form method="post" enctype="multipart/form-data" id="gform_1" action="/">
+                        <div class="gform_body gform-body"><ul id="gform_fields_1" class="gform_fields top_label form_sublabel_below description_below"><li id="field_1_1" class="gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible" data-js-reload="field_1_1"><label class="gfield_label" for="input_1_1">Name<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class="ginput_container ginput_container_text"><input name="input_1" id="input_1_1" type="text" class="large" tabindex="1" aria-required="true" aria-invalid="false"> </div></li><li id="field_1_3" class="gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible" data-js-reload="field_1_3"><label class="gfield_label" for="input_1_3">Email<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class="ginput_container ginput_container_email">
+                            <input name="input_3" id="input_1_3" type="text" class="large" tabindex="2" aria-required="true" aria-invalid="false">
+                        </div></li><li id="field_1_4" class="gfield field_sublabel_below field_description_below gfield_visibility_visible" data-js-reload="field_1_4"><label class="gfield_label" for="input_1_4">Phone</label><div class="ginput_container ginput_container_phone"><input name="input_4" id="input_1_4" type="text" class="large" tabindex="3" aria-invalid="false"></div></li><li id="field_1_5" class="gfield gf_right_half field_sublabel_below field_description_below gfield_visibility_visible" data-js-reload="field_1_5"><label class="gfield_label" for="input_1_5">Message</label><div class="ginput_container ginput_container_textarea"><textarea name="input_5" id="input_1_5" class="textarea medium" tabindex="4" aria-invalid="false" rows="10" cols="50"></textarea></div></li><li id="field_1_6" class="gfield field_sublabel_below field_description_below hidden_label gfield_visibility_visible" data-js-reload="field_1_6"><label class="gfield_label" for="input_1_6">CAPTCHA</label><div id="input_1_6" class="ginput_container ginput_recaptcha gform-initialized" data-sitekey="6LfgqPgqAAAAAAQYSBE_wP7cAhCzvj9Z5kVcbVys" data-theme="light" data-tabindex="5" data-badge=""><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-kgc1kuiry2c9" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/anchor.html" tabindex="5"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none; --darkreader-inline-border-top: var(--darkreader-border-c1c1c1, #42474a); --darkreader-inline-border-right: var(--darkreader-border-c1c1c1, #42474a); --darkreader-inline-border-bottom: var(--darkreader-border-c1c1c1, #42474a); --darkreader-inline-border-left: var(--darkreader-border-c1c1c1, #42474a);" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""></textarea></div><iframe style="display: none;"></iframe></div></li></ul></div>
+        <div class="gform_footer top_label"> <input type="submit" id="gform_submit_button_1" class="gform_button button" value="Connect" tabindex="6" onclick='if(window["gf_submitting_1"]){return false;}  window["gf_submitting_1"]=true;  ' onkeypress='if( event.keyCode == 13 ){ if(window["gf_submitting_1"]){return false;} window["gf_submitting_1"]=true;  jQuery("#gform_1").trigger("submit",[true]); }'> 
+            <input type="hidden" class="gform_hidden" name="is_submit_1" value="1">
+            <input type="hidden" class="gform_hidden" name="gform_submit" value="1">
+            
+            <input type="hidden" class="gform_hidden" name="gform_unique_id" value="">
+            <input type="hidden" class="gform_hidden" name="state_1" value="WyJbXSIsIjc3NzllY2UzZmNjMDQxZWU3YzNiNGZjNWU5YzNiNTUxIl0=">
+            <input type="hidden" class="gform_hidden" name="gform_target_page_number_1" id="gform_target_page_number_1" value="0">
+            <input type="hidden" class="gform_hidden" name="gform_source_page_number_1" id="gform_source_page_number_1" value="1">
+            <input type="hidden" name="gform_field_values" value="">
+            
+        </div>
+                        </form>
+                        </div></div> </div>
+			</div>
+		</div>
+	</section>
+	
+	<div class="copyright">
+		<p>© Copyright 2017-2025 | <a href="https://www.oilcapitalelectric.com/terms">Privacy &amp; Cookie Policy</a> | <a href="https://station8branding.com/" target="_blank">Website by Station8</a></p>
+		<ul class="social">
+			
+		</ul>
+	</div>
+	
+</footer>
+
+		<!--
+		<script>
+		(function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
+		(f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
+		l=i.getElementsByTagName(r)[0];h.async=1;h.src=e;l.parentNode.insertBefore(h,l)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
+		ga('send', 'pageview');
+		</script> -->
+		<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/intentionally-blank\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="text/javascript" src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/bootstrap.bundle.min.js" id="bootstrap-bundle-js"></script>
+<script type="text/javascript" src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/main.js" id="main-js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+ gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 1) {jQuery('#input_1_4').mask('(999) 999-9999').bind('keypress', function(e){if(e.which == 13){jQuery(this).blur();} } );} } );jQuery(document).bind('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } ); 
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+ gform.initializeOnLoaded( function() { jQuery(document).trigger('gform_post_render', [1, 1]) } ); 
+/* ]]> */
+</script>
+
+<p id="a11y-speak-intro-text" class="a11y-speak-intro-text" style="position: absolute; margin: -1px; padding: 0px; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); clip-path: inset(50%); border: 0px; overflow-wrap: normal !important; --darkreader-inline-border-top: currentcolor; --darkreader-inline-border-right: currentcolor; --darkreader-inline-border-bottom: currentcolor; --darkreader-inline-border-left: currentcolor;" hidden="hidden" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">Notifications</p><div id="a11y-speak-assertive" class="a11y-speak-region" style="position: absolute; margin: -1px; padding: 0px; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); clip-path: inset(50%); border: 0px; overflow-wrap: normal !important; --darkreader-inline-border-top: currentcolor; --darkreader-inline-border-right: currentcolor; --darkreader-inline-border-bottom: currentcolor; --darkreader-inline-border-left: currentcolor;" aria-live="assertive" aria-relevant="additions text" aria-atomic="true" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""></div><div id="a11y-speak-polite" class="a11y-speak-region" style="position: absolute; margin: -1px; padding: 0px; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); clip-path: inset(50%); border: 0px; overflow-wrap: normal !important; --darkreader-inline-border-top: currentcolor; --darkreader-inline-border-right: currentcolor; --darkreader-inline-border-bottom: currentcolor; --darkreader-inline-border-left: currentcolor;" aria-live="polite" aria-relevant="additions text" aria-atomic="true" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""></div><div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px; --darkreader-inline-bgcolor: var(--darkreader-background-ffffff, #181a1b); --darkreader-inline-border-top: var(--darkreader-border-cccccc, #3e4446); --darkreader-inline-border-right: var(--darkreader-border-cccccc, #3e4446); --darkreader-inline-border-bottom: var(--darkreader-border-cccccc, #3e4446); --darkreader-inline-border-left: var(--darkreader-border-cccccc, #3e4446); --darkreader-inline-boxshadow: var(--darkreader-background-00000033, rgba(0, 0, 0, 0.2)) 2px 2px 3px;" data-darkreader-inline-bgcolor="" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="" data-darkreader-inline-boxshadow=""><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05; --darkreader-inline-bgcolor: var(--darkreader-background-ffffff, #181a1b);" data-darkreader-inline-bgcolor=""></div><div style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000; --darkreader-inline-border-top: transparent; --darkreader-inline-border-right: transparent; --darkreader-inline-border-bottom: transparent; --darkreader-inline-border-left: transparent;" class="g-recaptcha-bubble-arrow" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""></div><div style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000; --darkreader-inline-border-top: transparent; --darkreader-inline-border-right: transparent; --darkreader-inline-border-bottom: transparent; --darkreader-inline-border-left: transparent;" class="g-recaptcha-bubble-arrow" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""></div><div style="z-index: 2000000000; position: relative;"><iframe title="recaptcha challenge expires in two minutes" style="width: 100%; height: 100%;" name="c-kgc1kuiry2c9" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="Home%20_%20Electrical,%20Mechanical%20&amp;%20Plumbing%20_%20Oil%20Captial%20Electric_files/bframe.html"></iframe></div></div></body></html>

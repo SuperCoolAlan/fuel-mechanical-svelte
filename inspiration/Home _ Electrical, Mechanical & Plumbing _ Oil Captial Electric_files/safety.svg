@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="63px" height="55px" viewBox="0 0 63 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>alert-triangle</title>
+    <defs></defs>
+    <g id="Mech" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-568.000000, -3120.000000)">
+        <g id="Group-3" transform="translate(0.000000, 2631.000000)" stroke="#FFFFFF">
+            <g id="Group-2" transform="translate(486.765625, 418.000000)">
+                <g id="alert-triangle" transform="translate(85.000000, 74.000000)">
+                    <path d="M23.4173131,2.60592848 L0.718273062,40.8796841 C-0.234063881,42.5454306 -0.239749881,44.5964797 0.703336505,46.2675865 C1.64642289,47.9386933 3.39663119,48.9788595 5.30096,49 L50.69904,49 C52.6033688,48.9788595 54.3535771,47.9386933 55.2966635,46.2675865 C56.2397499,44.5964797 56.2340639,42.5454306 55.2817269,40.8796841 L32.5826869,2.60592848 C31.6110349,0.988040318 29.8735047,0 28,0 C26.1264953,0 24.3889651,0.988040318 23.4173131,2.60592848 Z" id="Shape" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M28,17 L28,28" id="Shape" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <circle id="Oval" fill="#FFFFFF" cx="28" cy="39" r="3"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
