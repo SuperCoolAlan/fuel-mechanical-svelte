@@ -32,6 +32,7 @@
           <li>HVAC Installation & Repair</li>
           <li>Heating System Maintenance</li>
           <li>Air Conditioning Services</li>
+          <li>Water Heater Installation</li>
           <li>Ductwork Installation</li>
           <li>Emergency Repairs</li>
           <li>System Inspections</li>
