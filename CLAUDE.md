@@ -4,25 +4,68 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This appears to be a minimal Svelte project called "fuel-mechanical-svelte" that is currently in its initial setup phase. The repository contains only a settings.json file with model configuration.
+Fuel Mechanical LLC is a professional SvelteKit website for a heating and cooling services company. The project is built with modern web technologies and designed for deployment on Vercel.
 
 ## Current State
 
-The codebase is essentially empty except for:
-- `settings.json` - Contains Claude model configuration (claude-4-0-opus)
+**Framework:** SvelteKit 2.28.0 with Svelte 5.38.1
+**Build Tool:** Vite 7.1.2
+**Deployment:** Vercel with `@sveltejs/adapter-vercel`
+**Styling:** Custom CSS with utility classes and CSS custom properties
+
+### Existing Structure:
+- `src/app.html` - Main HTML template with SEO meta tags
+- `src/app.css` - Global styles with company color scheme and utility classes
+- `src/routes/+layout.svelte` - Basic layout component
+- `src/routes/+page.svelte` - Hero homepage with company branding
+- `static/` - Logo assets (PNG, SVG, favicon)
+- `inspiration/` - Design reference files from mechanical contracting websites
+- `vercel.json` - Deployment configuration
 
 ## Architecture Notes
 
-This project appears to be intended as a Svelte application but lacks the standard project structure, dependencies, and build configuration typical of Svelte projects. When working with this codebase:
+1. **SvelteKit App Router:** Uses file-based routing in `src/routes/`
+2. **Component-First:** Built for reusable Svelte components
+3. **CSS Custom Properties:** Color scheme defined in `:root` variables
+4. **Responsive Design:** Mobile-first approach with utility classes
+5. **SEO Ready:** Proper meta tags and semantic HTML structure
 
-1. Standard Svelte project structure is expected to be added
-2. Build tools and dependencies will need to be configured
-3. Component architecture will follow Svelte conventions once established
+## Brand Identity
+
+**Company:** Fuel Mechanical LLC - Heating & Cooling Services
+**Color Scheme:**
+- Primary Blue: `#3b82f6`
+- Secondary Blue: `#1d4ed8`
+- Accent Orange: `#fbbf24`
+- Accent Red: `#ef4444`
+- Text Colors: `#1f2937` (dark), `#6b7280` (light)
+
+## Design Inspiration
+
+The `./inspiration/` directory contains analysis of two professional mechanical contracting websites:
+- Oil Capital Electric: Bold industrial design with split-screen video layout
+- Platinum Mechanical: Clean modern design with service categorization
+
+Key patterns to implement:
+- Service categorization (HVAC, heating, cooling)
+- Trust indicators (experience, certifications)
+- Project showcases with professional imagery
+- Prominent contact information
+- Industry-focused content strategy
 
 ## Development Setup
 
-Currently no development commands are available. Standard Svelte development workflow will likely include:
-- Installing dependencies with npm/yarn
-- Development server for hot reloading
-- Build processes for production
-- Testing framework setup
+**Available Commands:**
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run check` - Type checking and validation
+
+**Next Development Priorities:**
+1. Navigation system with service categories
+2. About page with company information
+3. Services pages for different specialties
+4. Contact page with form integration
+5. Project portfolio section
+6. Enhanced responsive design
+7. Performance optimization
