@@ -54,8 +54,8 @@
             <p>Transparent pricing with no hidden fees or surprises</p>
           </div>
           <div class="feature">
-            <h3>Precision Engineering</h3>
-            <p>Meticulous attention to detail in every installation and repair</p>
+            <h3>Licensed & Insured</h3>
+            <p>Fully licensed and insured for your peace of mind and protection</p>
           </div>
         </div>
       </div>
@@ -72,8 +72,12 @@
   }
 
   .hero-title {
+    font-family: 'Oswald', sans-serif;
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    transform: skewX(-8deg);
     margin-bottom: 1rem;
   }
 

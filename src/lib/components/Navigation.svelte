@@ -19,6 +19,7 @@
     <div class="nav-links">
       <a href="/" class="nav-link" class:active={$page.route.id === '/'}>Home</a>
       <a href="/about" class="nav-link" class:active={$page.route.id === '/about'}>About</a>
+      <a href="/portfolio" class="nav-link" class:active={$page.route.id === '/portfolio'}>Portfolio</a>
       <a href="/contact" class="nav-link" class:active={$page.route.id === '/contact'}>Contact</a>
     </div>
   </div>

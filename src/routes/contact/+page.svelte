@@ -103,8 +103,12 @@
   }
 
   .hero-title {
+    font-family: 'Oswald', sans-serif;
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    transform: skewX(-8deg);
     margin-bottom: 1rem;
   }
 
